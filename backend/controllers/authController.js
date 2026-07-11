@@ -76,6 +76,8 @@ export const logout = catchAsyncErrors(async (req, res, next) => {
   res.cookie("jwt", null, {
     expires: new Date(Date.now()),
     httpOnly: true,
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    secure: process.env.NODE_ENV === "production",
   })
 
   res.status(200).json({
@@ -99,6 +101,8 @@ export const deleteAccount = catchAsyncErrors(async (req, res, next) => {
   res.cookie("jwt", null, {
     expires: new Date(Date.now()),
     httpOnly: true,
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    secure: process.env.NODE_ENV === "production",
   })
 
   res.status(200).json({
