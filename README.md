@@ -1,5 +1,12 @@
 # FoodJenie - Food Delivery Platform
 
+[![CI/CD Pipeline](https://github.com/Tochiiy/foodjenie_ordering_webapp/actions/workflows/ci.yml/badge.svg)](https://github.com/Tochiiy/foodjenie_ordering_webapp/actions/workflows/ci.yml)
+[![Vercel](https://img.shields.io/badge/frontend-vercel-%23000000?logo=vercel)](https://foodjenie.vercel.app)
+[![Render](https://img.shields.io/badge/backend-render-%2346E3B7?logo=render)](https://foodjenie-ordering-webapp.onrender.com)
+
+**Live:** [https://foodjenie.vercel.app](https://foodjenie.vercel.app) (frontend)  
+**API:** [https://foodjenie-ordering-webapp.onrender.com](https://foodjenie-ordering-webapp.onrender.com) (backend)
+
 A full-stack food delivery platform built with the **MERN stack** (MongoDB, Express, React, Node.js). Users can browse restaurants, view menus, manage a cart, pay via Stripe, and track orders. AI-powered features include recipe generation, dish descriptions, and review sentiment analysis.
 
 ---
@@ -104,8 +111,6 @@ Food_Delivery_Website/
 │   └── package.json
 │
 ├── .github/workflows/   # CI/CD pipeline
-├── architecture.md      # Architecture document for internship PPT
-├── deployment.md        # Vercel + Render deployment guide
 ├── docker-compose.yml
 ├── .gitignore
 └── README.md
@@ -142,6 +147,7 @@ Food_Delivery_Website/
 | `DEFAULT_CURRENCY` | Currency (default: `usd`) |
 | `DELIVERY_AMOUNT` | Delivery fee in cents (default: `500`) |
 | `FRONTEND_URL` | Frontend origin for CORS |
+| `NODE_ENV` | Set to `production` in deployment (required for cross-origin cookies) |
 | `GROQ_API_KEY` | Groq API key for AI features |
 
 ### Frontend (`frontend/.env`)
@@ -262,12 +268,9 @@ cd frontend && npm run build   # Verify production build
 
 ## Deployment
 
-See [`deployment.md`](./deployment.md) for detailed Vercel (frontend) + Render (backend) setup.
-
-Quick reference:
-- **Frontend (Vercel):** Root dir `frontend`, set `VITE_API_URL` to backend URL
-- **Backend (Render):** Root dir `backend`, add all env vars from table above
-- **Docker:** `docker-compose up --build` for local full-stack
+- **Frontend — [Vercel](https://foodjenie.vercel.app):** Root dir `frontend`, Framework Vite, set `VITE_API_URL=https://foodjenie-ordering-webapp.onrender.com` in env vars
+- **Backend — [Render](https://foodjenie-ordering-webapp.onrender.com):** Root dir `backend`, Docker runtime, port `8080`, add all env vars from the table above and set `NODE_ENV=production`
+- **Local Docker:** `docker-compose up --build` for full-stack
 
 ---
 
