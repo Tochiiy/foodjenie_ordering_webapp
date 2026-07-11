@@ -1,16 +1,41 @@
 node_modules
 .env
+.env.*
 *.log
 dist
 .DS_Store
+__MACOSX
 *.local
+*.pptx
 
 # Backend
 backend/node_modules
 backend/config/config.env
 backend/.env
+backend/package-lock.json
 
 # Frontend
 frontend/node_modules
 frontend/dist
 frontend/.env
+frontend/package-lock.json
+
+# Reference / Generated
+Final_FoodProject_File/
+architecture.pptx
+
+# OS metadata
+Thumbs.db
+Desktop.ini
+
+# Dev / working notes
+memory.md
+web_flow.md
+continue.md
+architecture.excalidraw
+
+# Generated build scripts (keep source, ignore output)
+generate-ppt.js
+
+# Root package files (for pptxgenjs only)
+package-lock.json

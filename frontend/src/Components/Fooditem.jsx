@@ -1,30 +1,43 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons";
+import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/actions/cartActions";
+import { toast } from "react-toastify";
 
-const Fooditem = ({ fooditem }) => {
+const Fooditem = ({ fooditem, restaurant }) => {
   const [quantity, setQuantity] = useState(1);
   const [showButtons, setShowButtons] = useState(false);
+  const dispatch = useDispatch();
 
-  // Add button click
   const addToCartHandler = () => {
     setShowButtons(true);
     setQuantity(1);
+    dispatch(addToCart({
+      foodItemId: fooditem._id,
+      quantity: 1,
+      restaurantId: restaurant
+    }));
+    toast.success("Item added to cart");
   };
 
-  // Increase quantity
   const increaseQty = () => {
     if (quantity < fooditem.stock) {
-      setQuantity(quantity + 1);
+      const newQty = quantity + 1;
+      setQuantity(newQty);
+      dispatch(addToCart({
+        foodItemId: fooditem._id,
+        quantity: 1,
+        restaurantId: restaurant
+      }));
     }
   };
 
-  // Decrease quantity
   const decreaseQty = () => {
     if (quantity > 1) {
-      setQuantity(quantity - 1);
+      const newQty = quantity - 1;
+      setQuantity(newQty);
     } else {
-      // if 0 → go back to Add button
       setShowButtons(false);
       setQuantity(1);
     }
@@ -45,7 +58,7 @@ const Fooditem = ({ fooditem }) => {
           <p className="fooditem_des">{fooditem.description}</p>
 
           <p className="card-text">
-            <FontAwesomeIcon icon={faIndianRupeeSign} size="xs" />
+            <FontAwesomeIcon icon={faDollarSign} size="xs" />
             {fooditem.price}
           </p>
 

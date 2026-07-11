@@ -8,6 +8,12 @@ const restaurantSchema = new mongoose.Schema({
         maxLength: [100, "Restaurant name cannot be more than 100 chars"]
     },
 
+    cuisine: {
+        type: String,
+        required: [true, "Please enter the cuisine type"],
+        enum: ["Japanese", "Indian", "Italian", "Mexican", "Chinese", "American", "Thai", "Mediterranean", "Other"],
+        default: "Other"
+    },
     isVeg: {
         type: Boolean,
         default: false

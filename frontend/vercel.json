@@ -1,0 +1,6 @@
+{
+  "buildCommand": "vite build",
+  "devCommand": "vite",
+  "outputDirectory": "dist",
+  "framework": "vite"
+}

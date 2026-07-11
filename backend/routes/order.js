@@ -11,9 +11,10 @@ import { isAuthenticatedUser, authorizeRoles } from "../middlewares/auth.js"
 
 router.use(isAuthenticatedUser)
 
-router.route("/").post(createOrder).get(getMyOrders)
-router.get("/:id", getOrder)
 router.get("/admin/all", authorizeRoles("admin"), getAllOrders)
 router.put("/admin/:id", authorizeRoles("admin"), updateOrderStatus)
+
+router.route("/").post(createOrder).get(getMyOrders)
+router.get("/:id", getOrder)
 
 export default router

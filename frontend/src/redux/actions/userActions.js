@@ -7,6 +7,7 @@ import {
   updateRequest,
   updateSuccess,
   updateFail,
+  deleteAccount,
 } from "../slices/userSlice";
 
 export const loginUser = (email, password) => async (dispatch) => {
@@ -52,12 +53,22 @@ export const logoutUser = () => async (dispatch) => {
   }
 };
 
+export const deleteUser = () => async (dispatch) => {
+  try {
+    dispatch(userRequest());
+    await api.delete("/v1/users/me");
+    localStorage.removeItem("cartItems");
+    localStorage.removeItem("shippingInfo");
+    dispatch(deleteAccount());
+  } catch (error) {
+    dispatch(userFail(error.response?.data?.message || error.message));
+  }
+};
+
 export const updateProfile = (userData) => async (dispatch) => {
   try {
     dispatch(updateRequest());
-    const { data } = await api.put("/v1/users/me", userData, {
-      headers: { "Content-Type": "multipart/form-data" },
-    });
+    const { data } = await api.put("/v1/users/me", userData);
     dispatch(updateSuccess(true));
     dispatch(userSuccess(data.data.user));
   } catch (error) {

@@ -1,14 +1,13 @@
 import catchAsyncErrors from "../middlewares/catchAsyncErrors.js";
-import dotenv from "dotenv";
 import Stripe from "stripe";
 
-dotenv.config({ path: "./config/config.env" });
+const getStripe = () => new Stripe(process.env.STRIPE_SECRET_KEY);
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-
-const DEFAULT_CURRENCY = process.env.DEFAULT_CURRENCY || "usd";
-const DEFAULT_DELIVERY_AMOUNT = parseInt(process.env.DELIVERY_AMOUNT || "500", 10);
-const ALLOWED_COUNTRIES = (process.env.ALLOWED_COUNTRIES || "").split(",").filter(Boolean);
+const getConfig = () => ({
+  DEFAULT_CURRENCY: process.env.DEFAULT_CURRENCY || "usd",
+  DEFAULT_DELIVERY_AMOUNT: parseInt(process.env.DELIVERY_AMOUNT || "500", 10),
+  ALLOWED_COUNTRIES: (process.env.ALLOWED_COUNTRIES || "").split(",").filter(Boolean),
+});
 
 const STRIPE_SUPPORTED_COUNTRIES = [
   "US", "CA", "GB", "IE", "AU", "NZ", "AT", "BE", "BG", "HR", "CY", "CZ", "DK",
@@ -28,8 +27,10 @@ export const processPayment = catchAsyncErrors(async (req, res, next) => {
     });
   }
 
-  const selectedCurrency = (currency || DEFAULT_CURRENCY).toLowerCase();
-  const countries = ALLOWED_COUNTRIES.length > 0 ? ALLOWED_COUNTRIES : STRIPE_SUPPORTED_COUNTRIES;
+  const stripe = getStripe();
+  const config = getConfig();
+  const selectedCurrency = (currency || config.DEFAULT_CURRENCY).toLowerCase();
+  const countries = config.ALLOWED_COUNTRIES.length > 0 ? config.ALLOWED_COUNTRIES : STRIPE_SUPPORTED_COUNTRIES;
 
   const lineItems = items.map((item) => ({
     price_data: {
@@ -54,7 +55,7 @@ export const processPayment = catchAsyncErrors(async (req, res, next) => {
         shipping_rate_data: {
           display_name: "Delivery Charges",
           type: "fixed_amount",
-          fixed_amount: { amount: DEFAULT_DELIVERY_AMOUNT, currency: selectedCurrency },
+          fixed_amount: { amount: config.DEFAULT_DELIVERY_AMOUNT, currency: selectedCurrency },
           delivery_estimate: {
             minimum: { unit: "hour", value: 1 },
             maximum: { unit: "hour", value: 3 },

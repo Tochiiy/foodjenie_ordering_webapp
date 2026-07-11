@@ -3,6 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   menus: [],
   menuId: null,
+  newMenu: null,
+  updatedMenu: null,
 
   loading: false,
   error: null,

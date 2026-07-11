@@ -23,7 +23,7 @@ export default class Email {
   }
 
   async send(template, subject) {
-    const html = pug.renderFile(`${process.cwd()}/view/${template}.pug`, {
+    const html = pug.renderFile(`${process.cwd()}/views/${template}.pug`, {
       firstName: this.firstName,
       url: this.url,
       subject,

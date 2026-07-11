@@ -1,4 +1,6 @@
 import User from "../models/user.js"
+import Cart from "../models/cartModel.js"
+import Order from "../models/order.js"
 import ErrorHandler from "../utils/errorHandler.js"
 import catchAsyncErrors from "../middlewares/catchAsyncErrors.js"
 import sendToken from "../utils/sendToken.js"
@@ -79,6 +81,29 @@ export const logout = catchAsyncErrors(async (req, res, next) => {
   res.status(200).json({
     success: true,
     message: "Logged out",
+  })
+})
+
+export const deleteAccount = catchAsyncErrors(async (req, res, next) => {
+  const user = await User.findById(req.user.id)
+
+  if (!user) {
+    return next(new ErrorHandler("User not found", 404))
+  }
+
+  await Cart.deleteMany({ user: req.user.id })
+  await Order.deleteMany({ user: req.user.id })
+
+  await User.findByIdAndDelete(req.user.id)
+
+  res.cookie("jwt", null, {
+    expires: new Date(Date.now()),
+    httpOnly: true,
+  })
+
+  res.status(200).json({
+    success: true,
+    message: "Account deleted successfully",
   })
 })
 

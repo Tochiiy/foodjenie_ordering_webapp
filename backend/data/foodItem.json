@@ -4,13 +4,208 @@
     "price": 250,
     "description": "Fragrant basmati rice layered with spiced chicken",
     "ratings": 4.5,
-    "images": [
-      {
-        "public_id": "chicken_biryani",
-        "url": "https://example.com/chicken-biryani.jpg"
-      }
-    ],
+    "images": [{"public_id": "chicken_biryani", "url": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop"}],
     "stock": 50,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Margherita Pizza",
+    "price": 299,
+    "description": "Classic pizza with fresh mozzarella, tomatoes, and basil",
+    "ratings": 4.7,
+    "images": [{"public_id": "margherita_pizza", "url": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop"}],
+    "stock": 40,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Butter Chicken",
+    "price": 320,
+    "description": "Creamy tomato-based curry with tender chicken pieces",
+    "ratings": 4.8,
+    "images": [{"public_id": "butter_chicken", "url": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop"}],
+    "stock": 35,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Naan Bread",
+    "price": 45,
+    "description": "Soft and fluffy oven-baked Indian bread",
+    "ratings": 4.3,
+    "images": [{"public_id": "naan_bread", "url": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop"}],
+    "stock": 100,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Sushi Platter",
+    "price": 599,
+    "description": "Assorted fresh sushi and sashimi platter",
+    "ratings": 4.9,
+    "images": [{"public_id": "sushi_platter", "url": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=400&h=300&fit=crop"}],
+    "stock": 20,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Buddha Bowl",
+    "price": 349,
+    "description": "Healthy bowl with quinoa, roasted vegetables, and tahini dressing",
+    "ratings": 4.4,
+    "images": [{"public_id": "buddha_bowl", "url": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=300&fit=crop"}],
+    "stock": 30,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Caesar Salad",
+    "price": 199,
+    "description": "Crisp romaine lettuce with parmesan, croutons, and caesar dressing",
+    "ratings": 4.2,
+    "images": [{"public_id": "caesar_salad", "url": "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&h=300&fit=crop"}],
+    "stock": 45,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Chocolate Lava Cake",
+    "price": 199,
+    "description": "Warm chocolate cake with a molten center",
+    "ratings": 4.8,
+    "images": [{"public_id": "lava_cake", "url": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=400&h=300&fit=crop"}],
+    "stock": 25,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Mango Lassi",
+    "price": 99,
+    "description": "Refreshing yogurt drink blended with sweet mango",
+    "ratings": 4.5,
+    "images": [{"public_id": "mango_lassi", "url": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=400&h=300&fit=crop"}],
+    "stock": 80,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Spring Rolls",
+    "price": 149,
+    "description": "Crispy vegetable spring rolls with sweet chili dip",
+    "ratings": 4.1,
+    "images": [{"public_id": "spring_rolls", "url": "https://images.unsplash.com/photo-1606525437817-0055ae15d4d3?w=400&h=300&fit=crop"}],
+    "stock": 60,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Pad Thai",
+    "price": 279,
+    "description": "Stir-fried rice noodles with shrimp, peanuts, and tamarind sauce",
+    "ratings": 4.6,
+    "images": [{"public_id": "pad_thai", "url": "https://images.unsplash.com/photo-1559314809-0d155014e29e?w=400&h=300&fit=crop"}],
+    "stock": 35,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Tandoori Chicken",
+    "price": 349,
+    "description": "Yogurt-marinated chicken cooked in tandoor oven",
+    "ratings": 4.7,
+    "images": [{"public_id": "tandoori_chicken", "url": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&h=300&fit=crop"}],
+    "stock": 30,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Gulab Jamun",
+    "price": 79,
+    "description": "Deep-fried milk solids soaked in rose syrup",
+    "ratings": 4.6,
+    "images": [{"public_id": "gulab_jamun", "url": "https://images.unsplash.com/photo-166618aplenty-7921f5c7a7c0?w=400&h=300&fit=crop"}],
+    "stock": 90,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Pasta Alfredo",
+    "price": 249,
+    "description": "Creamy fettuccine alfredo with parmesan and herbs",
+    "ratings": 4.3,
+    "images": [{"public_id": "pasta_alfredo", "url": "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=400&h=300&fit=crop"}],
+    "stock": 40,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Green Smoothie",
+    "price": 129,
+    "description": "Fresh blend of spinach, banana, apple, and ginger",
+    "ratings": 4.0,
+    "images": [{"public_id": "green_smoothie", "url": "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=400&h=300&fit=crop"}],
+    "stock": 70,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Chicken Wings",
+    "price": 249,
+    "description": "Spicy buffalo chicken wings with blue cheese dip",
+    "ratings": 4.4,
+    "images": [{"public_id": "chicken_wings", "url": "https://images.unsplash.com/photo-1608039829572-fa3e3d00e0d8?w=400&h=300&fit=crop"}],
+    "stock": 45,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Vegetable Curry",
+    "price": 199,
+    "description": "Mixed vegetables in aromatic coconut curry sauce",
+    "ratings": 4.2,
+    "images": [{"public_id": "veggie_curry", "url": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=400&h=300&fit=crop"}],
+    "stock": 50,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Ice Cream Sundae",
+    "price": 149,
+    "description": "Vanilla ice cream with hot fudge, nuts, and cherry",
+    "ratings": 4.5,
+    "images": [{"public_id": "ice_cream_sundae", "url": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop"}],
+    "stock": 60,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "French Fries",
+    "price": 99,
+    "description": "Crispy golden fries seasoned with herbs",
+    "ratings": 4.1,
+    "images": [{"public_id": "french_fries", "url": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=300&fit=crop"}],
+    "stock": 100,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Garlic Bread",
+    "price": 89,
+    "description": "Toasted bread with garlic butter and herbs",
+    "ratings": 4.0,
+    "images": [{"public_id": "garlic_bread", "url": "https://images.unsplash.com/photo-1619535860434-ba1d8fa12522?w=400&h=300&fit=crop"}],
+    "stock": 80,
+    "numOfReviews": 0,
+    "reviews": []
+  },
+  {
+    "name": "Hot Coffee",
+    "price": 49,
+    "description": "Freshly brewed premium coffee",
+    "ratings": 4.3,
+    "images": [{"public_id": "hot_coffee", "url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop"}],
+    "stock": 200,
     "numOfReviews": 0,
     "reviews": []
   }

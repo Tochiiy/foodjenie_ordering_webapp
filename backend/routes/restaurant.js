@@ -6,6 +6,7 @@ import { getMenus, createMenu, addItemToMenu } from "../controllers/menuControll
 router.get("/", getAllRestaurants)
 router.post("/", createRestaurant)
 
+router.get("/:storeId", getRestaurant)
 router.delete("/:storeId", deleteRestaurant)
 router.get("/:storeId/menus", getMenus)
 router.post("/:storeId/menus", createMenu)

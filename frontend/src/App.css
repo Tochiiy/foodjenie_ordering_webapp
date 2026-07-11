@@ -387,6 +387,117 @@ footer {
   color: green;
 }
 
+/* AI Styles */
+.ai-status {
+  display: inline-block;
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  width: 65%;
+}
+
+.ai-horizontal-box {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 15px;
+  border: 1px solid #cde7cf;
+  border-radius: 12px;
+  background: #f6fff7;
+}
+
+.ai-section {
+  flex: 1;
+}
+
+.sentiment-badge {
+  background: #dff5df;
+  color: #078347;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.tag {
+  display: inline-block;
+  background: #dff5df;
+  padding: 5px 10px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.ai-btn {
+  margin-top: 10px;
+  border: none;
+  background: #078347;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.ai-btn:hover {
+  opacity: 0.9;
+}
+
+.ai-insights-box {
+  margin-top: 12px;
+  padding: 10px;
+  background: #f8fffa;
+  border: 1px solid #ddd;
+  border-left: 5px solid #28a745;
+  border-radius: 8px;
+  width: 35%;
+  margin-right: 1%;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.mentions {
+  margin-top: 10px;
+}
+
+.mention-tag {
+  display: inline-block;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  background: #078347;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.ai-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.mention-badge {
+  background: #f5f5f5;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 30px;
+  border: 2px solid rgb(180, 15, 15);
+}
+
 #fooditem_image {
   margin-top: 5rem;
   /* height: 900%; */
@@ -512,24 +623,22 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
-  font-weight: 700;
+  min-height: 80vh;
+  padding: 2rem 1rem;
 }
 
-.wrapper form {
-  padding: 2.5rem 3rem;
+.wrapper .form-control:focus {
+  border-color: #078347 !important;
+  box-shadow: 0 0 0 3px rgba(7, 131, 71, 0.15) !important;
+  outline: none;
 }
 
-.wrapper form .btn {
-  background-color: #078347;
-  border-color: #078347;
-  color: white;
-  margin-top: 2.5rem;
+.wrapper .card {
+  transition: transform 0.2s ease;
 }
 
-.wrapper form a {
-  font-size: 0.9rem;
-  color: grey;
+.wrapper a:hover {
+  text-decoration: underline !important;
 }
 
 /* Avatar */

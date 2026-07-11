@@ -31,6 +31,25 @@ export const createMenu = catchAsyncErrors(async (req, res, next) => {
   })
 })
 
+export const getAllMenus = catchAsyncErrors(async (req, res, next) => {
+  const menus = await Menu.find({ restaurant: req.params.storeId }).populate({
+    path: "menu.items",
+    model: "FoodItem"
+  })
+
+  res.status(200).json({ status: "Success", count: menus.length, data: menus })
+})
+
+export const deleteMenu = catchAsyncErrors(async (req, res, next) => {
+  const menu = await Menu.findByIdAndDelete(req.params.menuId)
+
+  if (!menu) {
+    return next(new ErrorHandler("Menu not found", 404))
+  }
+
+  res.status(200).json({ status: "Success", message: "Menu deleted" })
+})
+
 export const addItemToMenu = catchAsyncErrors(async (req, res, next) => {
   const { category, foodItemId } = req.body
 
