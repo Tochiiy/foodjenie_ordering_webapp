@@ -1,7 +1,10 @@
 import React, { useState } from "react"
+import { useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 import api from "../utils/api"
 
 const RecipeGenerator = () => {
+  const { isAuthenticated } = useSelector((state) => state.user)
   const [ingredients, setIngredients] = useState("")
   const [recipe, setRecipe] = useState("")
   const [loading, setLoading] = useState(false)
@@ -26,6 +29,24 @@ const RecipeGenerator = () => {
     } finally {
       setLoading(false)
     }
+  }
+
+  if (!isAuthenticated) {
+    return (
+      <div className="container py-5 text-center">
+        <div className="row justify-content-center">
+          <div className="col-12 col-lg-6">
+            <div className="card border-0 shadow-lg p-5" style={{ borderRadius: "16px" }}>
+              <h4 className="fw-bold mb-3">Login Required</h4>
+              <p className="text-muted mb-4">Only logged-in users can access the AI Recipe Generator.</p>
+              <Link to="/login" className="btn btn-lg text-white fw-semibold border-0 px-5" style={{ backgroundColor: "#078347", borderRadius: "10px" }}>
+                Login
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return (
