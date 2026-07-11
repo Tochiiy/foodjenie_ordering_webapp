@@ -12,8 +12,6 @@ __MACOSX
 backend/node_modules
 backend/config/config.env
 backend/.env
-backend/package-lock.json
-
 # Frontend
 frontend/node_modules
 frontend/dist
