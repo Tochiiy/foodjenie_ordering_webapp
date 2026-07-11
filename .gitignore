@@ -37,5 +37,9 @@ architecture.excalidraw
 # Generated build scripts (keep source, ignore output)
 generate-ppt.js
 
+# Internal docs (not for public repo)
+architecture.md
+deployment.md
+
 # Root package files (for pptxgenjs only)
 package-lock.json
