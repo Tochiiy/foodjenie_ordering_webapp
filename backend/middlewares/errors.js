@@ -3,6 +3,9 @@ import ErrorHandler from "../utils/errorHandler.js"
 export default (err, req, res, next) => {
   err.statusCode = err.statusCode || 500;
 
+  console.error(`[ERROR] ${err.statusCode} ${req.method} ${req.originalUrl}`);
+  console.error(err.stack || err.message);
+
   if (process.env.NODE_ENV === "DEVELOPMENT") {
     res.status(err.statusCode).json({
       success: false,
@@ -13,7 +16,6 @@ export default (err, req, res, next) => {
     return;
   }
 
-  // Default to production-like behavior
   let error = { ...err };
   error.message = err.message;
 
