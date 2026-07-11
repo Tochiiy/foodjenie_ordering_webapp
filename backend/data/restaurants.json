@@ -1,0 +1,282 @@
+[
+  {
+    "name": "Bella Napoli",
+    "isVeg": false,
+    "address": "123 Main Street, Downtown",
+    "ratings": 4.5,
+    "numOfReviews": 8,
+    "location": {
+      "type": "Point",
+      "coordinates": [40.7128, -74.006]
+    },
+    "images": [
+      {
+        "public_id": "restaurants/bella_napoli",
+        "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop"
+      }
+    ],
+    "reviewSentiment": "Highly Positive - Customers love the authentic Italian pizza and pasta, with special mentions of tiramisu and wine selection",
+    "reviewSummaryBullets": [
+      "Authentic Italian pizza and pasta highly praised",
+      "Tiramisu and wine selection are standout items",
+      "Friendly staff and cozy atmosphere",
+      "Great for dinner dates and special occasions"
+    ],
+    "reviewTopMentions": ["AuthenticItalian", "GreatPasta", "ExcellentService", "CozyAtmosphere"],
+    "reviews": [
+      { "name": "John Doe", "rating": 5, "Comment": "Amazing authentic Italian pizza!" },
+      { "name": "Jane Smith", "rating": 4, "Comment": "Great pasta, lovely ambiance" },
+      { "name": "Mike Johnson", "rating": 5, "Comment": "Best tiramisu in town" },
+      { "name": "Sarah Wilson", "rating": 4, "Comment": "Friendly staff and quick service" },
+      { "name": "David Brown", "rating": 5, "Comment": "The margherita pizza is divine" },
+      { "name": "Emily Davis", "rating": 4, "Comment": "Cozy atmosphere for dinner dates" },
+      { "name": "Chris Lee", "rating": 5, "Comment": "Excellent wine selection" },
+      { "name": "Lisa Wang", "rating": 4, "Comment": "Will definitely come back again" }
+    ]
+  },
+  {
+    "name": "Sakura Sushi",
+    "isVeg": false,
+    "address": "456 Oak Avenue, Midtown",
+    "ratings": 4.8,
+    "numOfReviews": 8,
+    "location": {
+      "type": "Point",
+      "coordinates": [40.7282, -73.7949]
+    },
+    "images": [
+      {
+        "public_id": "restaurants/sakura_sushi",
+        "url": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=400&h=300&fit=crop"
+      }
+    ],
+    "reviewSentiment": "Excellent - Fresh sushi and sashimi praised, beautiful presentation, great value for premium quality",
+    "reviewSummaryBullets": [
+      "Freshest sushi and sashimi in the city",
+      "Chef's special rolls are highly recommended",
+      "Beautiful presentation and authentic decor",
+      "Great value for premium Japanese cuisine"
+    ],
+    "reviewTopMentions": ["FreshSushi", "ChefsSpecial", "BeautifulPresentation", "AuthenticJapanese"],
+    "reviews": [
+      { "name": "Tom Harris", "rating": 5, "Comment": "Freshest sushi I've ever had" },
+      { "name": "Nina Patel", "rating": 5, "Comment": "The chef's special roll is a must-try" },
+      { "name": "Alex Kim", "rating": 4, "Comment": "Great quality for the price" },
+      { "name": "Rachel Green", "rating": 5, "Comment": "Incredible presentation and taste" },
+      { "name": "Kevin Lee", "rating": 5, "Comment": "Sashimi melts in your mouth" },
+      { "name": "Anna Chen", "rating": 4, "Comment": "Lovely traditional decor" },
+      { "name": "Mark Taylor", "rating": 5, "Comment": "Best Japanese restaurant in the city" },
+      { "name": "Sophie Martin", "rating": 4, "Comment": "Excellent service and atmosphere" }
+    ]
+  },
+  {
+    "name": "Green Leaf Bistro",
+    "isVeg": true,
+    "address": "789 Elm Street, Uptown",
+    "ratings": 4.2,
+    "numOfReviews": 8,
+    "location": {
+      "type": "Point",
+      "coordinates": [40.7589, -73.9851]
+    },
+    "images": [
+      {
+        "public_id": "restaurants/green_leaf",
+        "url": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=300&fit=crop"
+      }
+    ],
+    "reviewSentiment": "Positive - Customers enjoy the fresh vegan and vegetarian options, Buddha bowl is a standout",
+    "reviewSummaryBullets": [
+      "Delicious vegan and vegetarian options",
+      "Buddha bowl and smoothies are customer favorites",
+      "Fresh ingredients and healthy preparations",
+      "Great outdoor seating area"
+    ],
+    "reviewTopMentions": ["VeganOptions", "BuddhaBowl", "FreshIngredients", "HealthyEating"],
+    "reviews": [
+      { "name": "Olivia Brown", "rating": 4, "Comment": "Delicious vegan options" },
+      { "name": "Liam Wilson", "rating": 5, "Comment": "The Buddha bowl is amazing" },
+      { "name": "Emma Taylor", "rating": 4, "Comment": "Fresh ingredients and great flavors" },
+      { "name": "Noah Anderson", "rating": 4, "Comment": "Love the smoothie selection" },
+      { "name": "Ava Thomas", "rating": 5, "Comment": "Best vegetarian restaurant in town" },
+      { "name": "Ethan Jackson", "rating": 4, "Comment": "Healthy and tasty food" },
+      { "name": "Mia White", "rating": 4, "Comment": "Nice outdoor seating area" },
+      { "name": "James Garcia", "rating": 4, "Comment": "Great place for healthy eating" }
+    ]
+  },
+  {
+    "name": "Tandoori Nights",
+    "isVeg": false,
+    "address": "321 Pine Road, East Side",
+    "ratings": 4.6,
+    "numOfReviews": 8,
+    "location": {
+      "type": "Point",
+      "coordinates": [40.7484, -73.9857]
+    },
+    "images": [
+      {
+        "public_id": "restaurants/tandoori_nights",
+        "url": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop"
+      }
+    ],
+    "reviewSentiment": "Highly Positive - Authentic North Indian cuisine, butter chicken and naan are customer favorites",
+    "reviewSummaryBullets": [
+      "Authentic North Indian cuisine with rich flavors",
+      "Butter chicken and naan bread are standout dishes",
+      "Excellent lunch buffet with great variety",
+      "Spicy and flavorful curries"
+    ],
+    "reviewTopMentions": ["AuthenticIndian", "ButterChicken", "NaanBread", "GreatCurries"],
+    "reviews": [
+      { "name": "Raj Kumar", "rating": 5, "Comment": "Authentic North Indian cuisine" },
+      { "name": "Priya Singh", "rating": 5, "Comment": "Butter chicken is phenomenal" },
+      { "name": "Amit Sharma", "rating": 4, "Comment": "Great selection of curries" },
+      { "name": "Deepa Patel", "rating": 5, "Comment": "Naan bread is perfectly baked" },
+      { "name": "Vikram Joshi", "rating": 4, "Comment": "Spicy and flavorful dishes" },
+      { "name": "Anita Gupta", "rating": 5, "Comment": "Excellent lunch buffet" },
+      { "name": "Sanjay Verma", "rating": 4, "Comment": "Reminds me of home cooking" },
+      { "name": "Neha Kapoor", "rating": 4, "Comment": "Great ambiance and service" }
+    ]
+  },
+  {
+    "name": "Le Petit Cafe",
+    "isVeg": false,
+    "address": "654 Maple Drive, West End",
+    "ratings": 4.3,
+    "numOfReviews": 8,
+    "location": {
+      "type": "Point",
+      "coordinates": [40.7614, -73.9776]
+    },
+    "images": [
+      {
+        "public_id": "restaurants/le_petit_cafe",
+        "url": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&h=300&fit=crop"
+      }
+    ],
+    "reviewSentiment": "Positive - Charming French bistro with heavenly croissants and great espresso",
+    "reviewSummaryBullets": [
+      "Heavenly croissants and fresh pastries",
+      "Best espresso in the neighborhood",
+      "Authentic French bistro atmosphere",
+      "Perfect spot for brunch"
+    ],
+    "reviewTopMentions": ["Croissants", "GreatEspresso", "FrenchBistro", "PerfectBrunch"],
+    "reviews": [
+      { "name": "Sophie Laurent", "rating": 5, "Comment": "Croissants are heavenly" },
+      { "name": "Pierre Dubois", "rating": 4, "Comment": "Best espresso in the neighborhood" },
+      { "name": "Marie Claire", "rating": 4, "Comment": "Lovely French bistro feel" },
+      { "name": "Jean-Pierre", "rating": 5, "Comment": "Quiche Lorraine is authentic" },
+      { "name": "Camille Noir", "rating": 4, "Comment": "Perfect spot for brunch" },
+      { "name": "Luc Blanc", "rating": 4, "Comment": "Pastries are freshly made daily" },
+      { "name": "Isabelle Rose", "rating": 5, "Comment": "Charming atmosphere and great food" },
+      { "name": "Louis Vert", "rating": 3, "Comment": "Good but a bit pricey" }
+    ]
+  },
+  {
+    "name": "Dragon Palace",
+    "isVeg": false,
+    "address": "987 Cherry Lane, Chinatown",
+    "ratings": 4.4,
+    "numOfReviews": 8,
+    "location": {
+      "type": "Point",
+      "coordinates": [40.7158, -73.9971]
+    },
+    "images": [
+      {
+        "public_id": "restaurants/dragon_palace",
+        "url": "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=400&h=300&fit=crop"
+      }
+    ],
+    "reviewSentiment": "Positive - Authentic Sichuan cuisine with fantastic dim sum and incredible hot pot",
+    "reviewSummaryBullets": [
+      "Authentic Sichuan cuisine with bold flavors",
+      "Dim sum and hot pot are customer favorites",
+      "Great variety on the menu with fresh ingredients",
+      "Quick service and generous portions"
+    ],
+    "reviewTopMentions": ["SichuanCuisine", "DimSum", "HotPot", "BoldFlavors"],
+    "reviews": [
+      { "name": "Wei Chen", "rating": 5, "Comment": "Authentic Sichuan cuisine" },
+      { "name": "Li Zhang", "rating": 4, "Comment": "Dim sum is fantastic" },
+      { "name": "Ming Wu", "rating": 5, "Comment": "Kung Pao chicken is perfect" },
+      { "name": "Yuki Tanaka", "rating": 4, "Comment": "Great variety on the menu" },
+      { "name": "Hiroshi Sato", "rating": 4, "Comment": "Fresh ingredients and bold flavors" },
+      { "name": "Mei Lin", "rating": 5, "Comment": "The hot pot is incredible" },
+      { "name": "Jun Park", "rating": 4, "Comment": "Quick service and tasty food" },
+      { "name": "Xia Huang", "rating": 4, "Comment": "My go-to Chinese restaurant" }
+    ]
+  },
+  {
+    "name": "Sunrise Diner",
+    "isVeg": false,
+    "address": "147 Broadway, Financial District",
+    "ratings": 3.9,
+    "numOfReviews": 8,
+    "location": {
+      "type": "Point",
+      "coordinates": [40.7129, -74.0059]
+    },
+    "images": [
+      {
+        "public_id": "restaurants/sunrise_diner",
+        "url": "https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=400&h=300&fit=crop"
+      }
+    ],
+    "reviewSentiment": "Positive - Classic American diner with great breakfast, fluffy pancakes and good value",
+    "reviewSummaryBullets": [
+      "Classic American breakfast and fluffy pancakes",
+      "Great value for money in financial district",
+      "Fast and friendly service",
+      "Consistent quality and good coffee"
+    ],
+    "reviewTopMentions": ["ClassicBreakfast", "FluffyPancakes", "GreatValue", "GoodCoffee"],
+    "reviews": [
+      { "name": "Bob Miller", "rating": 4, "Comment": "Classic American breakfast" },
+      { "name": "Carol Adams", "rating": 4, "Comment": "Pancakes are fluffy and delicious" },
+      { "name": "Dan Cooper", "rating": 3, "Comment": "Decent food, fast service" },
+      { "name": "Fiona Gray", "rating": 4, "Comment": "Great value for money" },
+      { "name": "George Hill", "rating": 4, "Comment": "Perfect spot for a quick meal" },
+      { "name": "Helen Baker", "rating": 4, "Comment": "Friendly staff and good coffee" },
+      { "name": "Ivan Torres", "rating": 3, "Comment": "Nothing fancy but always consistent" },
+      { "name": "Julia Reed", "rating": 5, "Comment": "Best diner in the financial district" }
+    ]
+  },
+  {
+    "name": "Spice Garden",
+    "isVeg": true,
+    "address": "258 Rose Street, Greenwich Village",
+    "ratings": 4.7,
+    "numOfReviews": 8,
+    "location": {
+      "type": "Point",
+      "coordinates": [40.7336, -73.9974]
+    },
+    "images": [
+      {
+        "public_id": "restaurants/spice_garden",
+        "url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop"
+      }
+    ],
+    "reviewSentiment": "Highly Positive - Pure vegetarian paradise with incredible Thai curries and beautiful garden seating",
+    "reviewSummaryBullets": [
+      "Best vegan Thai curry in the city",
+      "Beautiful garden seating area for dining",
+      "Every dish is a work of art with incredible flavors",
+      "Pure vegetarian paradise with excellent service"
+    ],
+    "reviewTopMentions": ["VeganThai", "GardenSeating", "PureVegetarian", "IncredibleFlavors"],
+    "reviews": [
+      { "name": "Zara Khan", "rating": 5, "Comment": "Best vegan Thai curry ever" },
+      { "name": "Omar Hassan", "rating": 5, "Comment": "Incredible flavors in every dish" },
+      { "name": "Lena Schmidt", "rating": 4, "Comment": "Beautiful garden seating area" },
+      { "name": "Marco Rossi", "rating": 5, "Comment": "The green curry is outstanding" },
+      { "name": "Elena Popescu", "rating": 5, "Comment": "Pure vegetarian paradise" },
+      { "name": "Yusuf Ali", "rating": 4, "Comment": "Fresh and aromatic dishes" },
+      { "name": "Fatima Noor", "rating": 5, "Comment": "Every dish is a work of art" },
+      { "name": "Carlos Mendez", "rating": 4, "Comment": "Excellent vegan options and service" }
+    ]
+  }
+]

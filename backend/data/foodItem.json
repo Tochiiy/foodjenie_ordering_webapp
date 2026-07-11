@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Chicken Biryani",
+    "price": 250,
+    "description": "Fragrant basmati rice layered with spiced chicken",
+    "ratings": 4.5,
+    "images": [
+      {
+        "public_id": "chicken_biryani",
+        "url": "https://example.com/chicken-biryani.jpg"
+      }
+    ],
+    "stock": 50,
+    "numOfReviews": 0,
+    "reviews": []
+  }
+]
