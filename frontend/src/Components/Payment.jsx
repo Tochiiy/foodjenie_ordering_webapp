@@ -1,13 +1,31 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import api from "../utils/api";
 import Loader from "./layout/Loader";
 
 const Payment = () => {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const { cartItem, resturant, deliveryInfo } = useSelector((state) => state.cart);
 
   useEffect(() => {
+    if (!cartItem || cartItem.length === 0) {
+      navigate("/cart", { replace: true });
+      return;
+    }
+
+    // If any storage has pending data, user came back from Stripe.
+    // Show cart instead of re-redirecting to Stripe.
+    if (localStorage.getItem("pendingOrder") || sessionStorage.getItem("orderCartItems")) {
+      localStorage.removeItem("pendingOrder");
+      sessionStorage.removeItem("orderCartItems");
+      sessionStorage.removeItem("orderRestaurant");
+      sessionStorage.removeItem("orderDeliveryInfo");
+      navigate("/cart", { replace: true });
+      return;
+    }
+
     const processPayment = async () => {
       setLoading(true);
       try {
@@ -37,7 +55,7 @@ const Payment = () => {
     };
 
     processPayment();
-  }, [cartItem, resturant, deliveryInfo]);
+  }, [cartItem, resturant, deliveryInfo, navigate]);
 
   return <div>{loading && <Loader />}</div>;
 };

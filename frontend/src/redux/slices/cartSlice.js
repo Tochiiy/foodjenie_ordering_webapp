@@ -1,10 +1,43 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const loadPendingCart = () => {
+  try {
+    const stored = localStorage.getItem("pendingOrder");
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      if (parsed._expiry && Date.now() < parsed._expiry && parsed.cartItem?.length) {
+        return {
+          cartItem: parsed.cartItem,
+          resturant: parsed.resturant,
+          deliveryInfo: parsed.deliveryInfo,
+        };
+      }
+      localStorage.removeItem("pendingOrder");
+    }
+
+    // sessionStorage fallback — survives cross-origin round-trip, no expiry
+    const items = sessionStorage.getItem("orderCartItems");
+    if (items) {
+      const cartItem = JSON.parse(items);
+      if (cartItem?.length) {
+        return {
+          cartItem,
+          resturant: JSON.parse(sessionStorage.getItem("orderRestaurant") || "{}"),
+          deliveryInfo: JSON.parse(sessionStorage.getItem("orderDeliveryInfo") || "null"),
+        };
+      }
+    }
+  } catch (_) {}
+  return null;
+};
+
+const pending = loadPendingCart();
+
 const initialState = {
-  cartItem: [],
+  cartItem: pending?.cartItem || [],
   loading: false,
-  resturant: {},
-  deliveryInfo: {
+  resturant: pending?.resturant || {},
+  deliveryInfo: pending?.deliveryInfo || {
     address: "",
     city: "",
     postalCode: "",
