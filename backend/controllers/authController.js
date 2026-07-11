@@ -6,6 +6,11 @@ import catchAsyncErrors from "../middlewares/catchAsyncErrors.js"
 import sendToken from "../utils/sendToken.js"
 import cloudinary from "../config/cloudinary.js"
 
+const crossOriginCookie = () => {
+  const isCrossOrigin = process.env.FRONTEND_URL && !process.env.FRONTEND_URL.includes("localhost");
+  return { sameSite: isCrossOrigin ? "none" : "lax", secure: isCrossOrigin };
+};
+
 export const signup = catchAsyncErrors(async (req, res, next) => {
   console.log('Signup request received:', req.body)
   const { name, email, password, passwordConfirm, phoneNumber } = req.body
@@ -76,8 +81,7 @@ export const logout = catchAsyncErrors(async (req, res, next) => {
   res.cookie("jwt", null, {
     expires: new Date(Date.now()),
     httpOnly: true,
-    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-    secure: process.env.NODE_ENV === "production",
+    ...crossOriginCookie(),
   })
 
   res.status(200).json({
@@ -101,8 +105,7 @@ export const deleteAccount = catchAsyncErrors(async (req, res, next) => {
   res.cookie("jwt", null, {
     expires: new Date(Date.now()),
     httpOnly: true,
-    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-    secure: process.env.NODE_ENV === "production",
+    ...crossOriginCookie(),
   })
 
   res.status(200).json({
